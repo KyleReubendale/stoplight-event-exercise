@@ -43,4 +43,18 @@ go.addEventListener('click', function(){
 go.addEventListener('mouseover', function(){
   console.log("Entered " + go.textContent + " button")
 })
+
+var clickLog = document.getElementsByClassName('button');
+var bulbLog = document.getElementsByClassName('bulb');
+for(let i  =0; i<clickLog.length; i++){
+  clickLog[i].addEventListener('click', function(){
+    if(bulbLog[i].style["background-color"] !== "black"){
+    console.log(clickLog[i].textContent + " bulb on");
+  } else {
+    console.log(clickLog[i].textContent + " bulb off")
+  }
+});
+}
+
+
 })();
