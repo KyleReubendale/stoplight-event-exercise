@@ -1,5 +1,46 @@
 (function() {
   'use strict';
 
-  // YOUR CODE HERE
+var stop = document.getElementById('stopButton');
+var stoplight = document.getElementById('stopLight');
+stop.addEventListener('click', function(){
+  if(stoplight.style["background-color"] === "red"){
+  stoplight.style["background-color"] = "black";
+} else {
+  stoplight.style["background-color"] = "red"
+};
+});
+
+stop.addEventListener('mouseover', function(){
+  console.log("Entered " + stop.textContent + " button")
+})
+
+
+var slow = document.getElementById('slowButton');
+var slowlight = document.getElementById('slowLight');
+slow.addEventListener('click', function(){
+  if(slowlight.style["background-color"] === "orange"){
+  slowlight.style["background-color"] = "black";
+} else {
+  slowlight.style["background-color"] = "orange"
+}
+})
+
+slow.addEventListener('mouseover', function(){
+  console.log("Entered " + slow.textContent + " button")
+})
+
+var go = document.getElementById('goButton');
+var golight = document.getElementById('goLight');
+go.addEventListener('click', function(){
+  if(golight.style["background-color"] === "green"){
+  golight.style["background-color"] = "black";
+} else {
+  golight.style["background-color"] = "green"
+}
+})
+
+go.addEventListener('mouseover', function(){
+  console.log("Entered " + go.textContent + " button")
+})
 })();
